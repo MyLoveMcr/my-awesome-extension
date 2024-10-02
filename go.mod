@@ -1,4 +1,4 @@
-module github.com/author_name/project_urlname
+module github.com/MyLoveMcr/my-awesome-extension
 
 go 1.22.0
 
@@ -6,22 +6,28 @@ toolchain go1.22.3
 
 require (
 	github.com/fatih/color v1.16.0
-	github.com/hiddify/hiddify-core v1.9.1-0.20241001065750-4a521ba61013
+	github.com/hiddify/hiddify-core v1.9.1-0.20241002200134-3681e574a913
 	github.com/sagernet/sing-box v1.8.9
 )
 
 require (
 	berty.tech/go-libtor v1.0.385 // indirect
-	github.com/Yiwen-Chan/tinydb v0.0.0-20230129042445-3321642f0674 // indirect
+	github.com/DataDog/zstd v1.4.1 // indirect
 	github.com/ajg/form v1.5.1 // indirect
 	github.com/andybalholm/brotli v1.1.0 // indirect
 	github.com/bepass-org/warp-plus v1.2.4 // indirect
 	github.com/caddyserver/certmagic v0.20.0 // indirect
 	github.com/cenkalti/backoff/v4 v4.1.1 // indirect
+	github.com/cespare/xxhash v1.1.0 // indirect
 	github.com/cloudflare/circl v1.4.0 // indirect
+	github.com/cosmos/gorocksdb v1.2.0 // indirect
 	github.com/cretz/bine v0.2.0 // indirect
 	github.com/desertbit/timer v0.0.0-20180107155436-c41aec40b27f // indirect
+	github.com/dgraph-io/badger/v2 v2.2007.2 // indirect
+	github.com/dgraph-io/ristretto v0.0.3-0.20200630154024-f66de99634de // indirect
+	github.com/dgryski/go-farm v0.0.0-20190423205320-6a90982ecee2 // indirect
 	github.com/dgryski/go-metro v0.0.0-20211217172704-adc40b04c140 // indirect
+	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/francoispqt/gojay v1.2.13 // indirect
 	github.com/fsnotify/fsnotify v1.7.0 // indirect
 	github.com/gaukas/godicttls v0.0.4 // indirect
@@ -34,6 +40,8 @@ require (
 	github.com/gobwas/httphead v0.1.0 // indirect
 	github.com/gobwas/pool v0.2.1 // indirect
 	github.com/gofrs/uuid/v5 v5.2.0 // indirect
+	github.com/golang/protobuf v1.5.4 // indirect
+	github.com/golang/snappy v0.0.1 // indirect
 	github.com/google/btree v1.1.2 // indirect
 	github.com/google/pprof v0.0.0-20240528025155-186aa0362fba // indirect
 	github.com/gorilla/websocket v1.5.3 // indirect
@@ -43,6 +51,7 @@ require (
 	github.com/improbable-eng/grpc-web v0.15.0 // indirect
 	github.com/insomniacslk/dhcp v0.0.0-20231206064809-8c70d406f6d2 // indirect
 	github.com/jellydator/validation v1.1.0 // indirect
+	github.com/jmhodges/levigo v1.0.0 // indirect
 	github.com/josharian/native v1.1.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/kardianos/service v1.2.2 // indirect
@@ -70,6 +79,7 @@ require (
 	github.com/pion/transport/v3 v3.0.1 // indirect
 	github.com/pion/turn/v3 v3.0.1 // indirect
 	github.com/pires/go-proxyproto v0.7.0 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
 	github.com/quic-go/qpack v0.4.0 // indirect
 	github.com/quic-go/qtls-go1-20 v0.4.1 // indirect
 	github.com/quic-go/quic-go v0.46.0 // indirect
@@ -96,6 +106,8 @@ require (
 	github.com/sagernet/wireguard-go v0.0.0-20231215174105-89dec3b2f3e8 // indirect
 	github.com/sagernet/ws v0.0.0-20231204124109-acfe8907c854 // indirect
 	github.com/seiflotfy/cuckoofilter v0.0.0-20240715131351-a2f2c23f1771 // indirect
+	github.com/syndtr/goleveldb v1.0.1-0.20200815110645-5c35d600f0ca // indirect
+	github.com/tendermint/tm-db v0.6.7 // indirect
 	github.com/u-root/uio v0.0.0-20230220225925-ffce2a382923 // indirect
 	github.com/v2fly/ss-bloomring v0.0.0-20210312155135-28617310f63e // indirect
 	github.com/vishvananda/netns v0.0.4 // indirect
@@ -103,6 +115,7 @@ require (
 	github.com/xtls/reality v0.0.0-20240712055506-48f0b2d5ed6d // indirect
 	github.com/xtls/xray-core v1.8.21 // indirect
 	github.com/zeebo/blake3 v0.2.3 // indirect
+	go.etcd.io/bbolt v1.3.6 // indirect
 	go.uber.org/mock v0.4.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.27.0 // indirect

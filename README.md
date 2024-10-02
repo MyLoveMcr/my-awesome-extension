@@ -1,4 +1,4 @@
-# hiddify-app-extension-template
+# my_awesome_extension
 
 
 ## How to Use This Template
@@ -32,7 +32,7 @@
 
 <div align=center>
     
-[![inlang status badge](https://inlang.com/badge?url=github.com/author_name/project_urlname)](https://inlang.com/editor/github.com/author_name/project_urlname?ref=badge)
+[![inlang status badge](https://inlang.com/badge?url=github.com/MyLoveMcr/my-awesome-extension)](https://inlang.com/editor/github.com/MyLoveMcr/my-awesome-extension?ref=badge)
 </div>
 
-Improve existing languages or add new ones by manually editing the JSON files located in `/hiddify_extension/translations` or by using the [Inlang online editor](https://inlang.com/editor/github.com/author_name/project_urlname).
+Improve existing languages or add new ones by manually editing the JSON files located in `/hiddify_extension/translations` or by using the [Inlang online editor](https://inlang.com/editor/github.com/MyLoveMcr/my-awesome-extension).

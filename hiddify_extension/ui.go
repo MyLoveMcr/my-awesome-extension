@@ -14,7 +14,7 @@ const (
 )
 
 // GetUI returns the UI form for the extension
-func (e *ExampleExtension) GetUI() ui.Form {
+func (e *MyAwesomeExtension) GetUI() ui.Form {
 	// Create a form depending on whether there is a background task or not
 	if e.cancel != nil {
 		return e.getRunningUI()
@@ -23,7 +23,7 @@ func (e *ExampleExtension) GetUI() ui.Form {
 }
 
 // setFormData validates and sets the form data from input
-func (e *ExampleExtension) setFormData(data map[string]string) error {
+func (e *MyAwesomeExtension) setFormData(data map[string]string) error {
 	// Check if CountKey exists in the provided data
 	if val, ok := data[CountKey]; ok {
 		if intValue, err := strconv.Atoi(val); err == nil {
@@ -40,11 +40,11 @@ func (e *ExampleExtension) setFormData(data map[string]string) error {
 	return nil // Return nil if data is set successfully
 }
 
-func (e *ExampleExtension) getRunningUI() ui.Form {
+func (e *MyAwesomeExtension) getRunningUI() ui.Form {
 
 	return ui.Form{
-		Title:       "project_urlname",
-		Description: "project_description",
+		Title:       "my-awesome-extension",
+		Description: "Awesome Extension my_awesome_extension created by MyLoveMcr",
 		Fields: [][]ui.FormField{
 			{{
 				Type:  ui.FieldConsole,
@@ -57,11 +57,11 @@ func (e *ExampleExtension) getRunningUI() ui.Form {
 		},
 	}
 }
-func (e *ExampleExtension) getStoppedUI() ui.Form {
+func (e *MyAwesomeExtension) getStoppedUI() ui.Form {
 	// Inital page
 	return ui.Form{
-		Title:       "project_urlname",
-		Description: "project_description",
+		Title:       "my-awesome-extension",
+		Description: "Awesome Extension my_awesome_extension created by MyLoveMcr",
 		Fields: [][]ui.FormField{
 			{{
 				Type:        ui.FieldInput,
@@ -88,7 +88,7 @@ func (e *ExampleExtension) getStoppedUI() ui.Form {
 }
 
 // addAndUpdateConsole adds messages to the console and updates the UI
-func (e *ExampleExtension) addAndUpdateConsole(message ...any) {
+func (e *MyAwesomeExtension) addAndUpdateConsole(message ...any) {
 	e.console = fmt.Sprintln(message...) + e.console // Prepend new messages to the console output
 	e.UpdateUI(e.GetUI())                            // Update the UI with the new console content
 }

@@ -19,20 +19,20 @@ var (
 	yellow = color.New(color.FgYellow)
 )
 
-// ExampleExtensionData holds the data specific to ExampleExtension
-type ExampleExtensionData struct {
+// MyAwesomeExtensionData holds the data specific to MyAwesomeExtension
+type MyAwesomeExtensionData struct {
 	Count int `json:"count"` // Number of counts for the extension
 }
 
-// ExampleExtension represents the core functionality of the extension
-type ExampleExtension struct {
-	ex.Base[ExampleExtensionData]                    // Embedding base extension functionality
+// MyAwesomeExtension represents the core functionality of the extension
+type MyAwesomeExtension struct {
+	ex.Base[MyAwesomeExtensionData]                    // Embedding base extension functionality
 	cancel                        context.CancelFunc // Function to cancel background tasks
 	console                       string             // Stores console output
 }
 
 // backgroundTask runs a task in the background, updating the console at intervals
-func (e *ExampleExtension) backgroundTask(ctx context.Context) {
+func (e *MyAwesomeExtension) backgroundTask(ctx context.Context) {
 	for count := 1; count <= e.Base.Data.Count; count++ {
 		select {
 		case <-ctx.Done(): // If context is done (cancel is pressed), exit the task
@@ -48,7 +48,7 @@ func (e *ExampleExtension) backgroundTask(ctx context.Context) {
 }
 
 // SubmitData processes and validates form submission data
-func (e *ExampleExtension) SubmitData(button string, data map[string]string) error {
+func (e *MyAwesomeExtension) SubmitData(button string, data map[string]string) error {
 	switch button {
 	case ui.ButtonDialogOk, ui.ButtonDialogClose:
 		return nil
@@ -81,7 +81,7 @@ func (e *ExampleExtension) SubmitData(button string, data map[string]string) err
 }
 
 // Cancel stops the ongoing background task if it exists
-func (e *ExampleExtension) stop() error {
+func (e *MyAwesomeExtension) stop() error {
 	if e.cancel != nil {
 		e.cancel()     // Cancel the task
 		e.cancel = nil // Clear the cancel function
@@ -90,24 +90,24 @@ func (e *ExampleExtension) stop() error {
 }
 
 // Stop is called when the extension is closed
-func (e *ExampleExtension) Close() error {
+func (e *MyAwesomeExtension) Close() error {
 	return e.stop() // Simply delegate to stop
 }
 
 // To Modify user's config before connecting, you can use this function
-func (e *ExampleExtension) BeforeAppConnect(hiddifySettings *config.HiddifyOptions, singconfig *option.Options) error {
+func (e *MyAwesomeExtension) BeforeAppConnect(hiddifySettings *config.HiddifyOptions, singconfig *option.Options) error {
 	return nil
 }
 
-// NewExampleExtension initializes a new instance of ExampleExtension with default values
-func NewExampleExtension() ex.Extension {
-	return &ExampleExtension{
-		Base: ex.Base[ExampleExtensionData]{
-			Data: ExampleExtensionData{ // Set default data
+// NewMyAwesomeExtension initializes a new instance of MyAwesomeExtension with default values
+func NewMyAwesomeExtension() ex.Extension {
+	return &MyAwesomeExtension{
+		Base: ex.Base[MyAwesomeExtensionData]{
+			Data: MyAwesomeExtensionData{ // Set default data
 				Count: 4, // Default count value
 			},
 		},
-		console: yellow.Sprint("Welcome to ") + green.Sprint("project_urlname\n"), // Default message
+		console: yellow.Sprint("Welcome to ") + green.Sprint("my-awesome-extension\n"), // Default message
 	}
 }
 
@@ -115,10 +115,10 @@ func NewExampleExtension() ex.Extension {
 func init() {
 	ex.RegisterExtension(
 		ex.ExtensionFactory{
-			Id:          "github.com/author_name/hiddify-app-extension-template/hiddify_extension", // Package identifier
-			Title:       "project_urlname",                                                         // Display title of the extension
-			Description: "project_description",                                                     // Brief description of the extension
-			Builder:     NewExampleExtension,                                                       // Function to create a new instance
+			Id:          "github.com/MyLoveMcr/my_awesome_extension/hiddify_extension", // Package identifier
+			Title:       "my-awesome-extension",                                                         // Display title of the extension
+			Description: "Awesome Extension my_awesome_extension created by MyLoveMcr",                                                     // Brief description of the extension
+			Builder:     NewMyAwesomeExtension,                                                       // Function to create a new instance
 		},
 	)
 }
